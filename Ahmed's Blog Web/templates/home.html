@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed's Blog </title>
+    <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
+    <link rel="stylesheet" href="/static/css/homestyles.css">
+    <link href='https://fonts.googleapis.com/css?family=Leckerli One' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body id = "light3">
+    <body onload = "typeWritermain()" ></body>
+    <div class="topnav nav_bar" id="light1">
+        <a href="/" class="nav_title active" id ="light2" >Ahmed Blogs</a>
+        {% if not current_user.is_authenticated: %}
+        <a class = "items" href="/login">Login</a>
+        <a class = "items" href="/register">Sign-Up</a>
+        {% else: %}
+        <a class = "items" href="/blogs">Blogs</a>
+        <a class = "items" href="/logout">Log Out</a>
+        {% endif %}
+        
+        <a class = "items" href="/about">About</a>
+        <a class = "items" href="/contact">Contact Me</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+    <div class="bg-text" id = "light4">
+        <h2>Welcome to</h2>
+        <h1 style="font-size:50px" id = "name"></h1>
+        <p id="quote"></p>
+    </div>
+    <div class="theme-container shadow-dark">
+      <img id="theme-icon"    src="https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg" alt="ERR">
+    </div>
+
+    <script src="/static/js/home.js"></script>
+</body>
+</html>

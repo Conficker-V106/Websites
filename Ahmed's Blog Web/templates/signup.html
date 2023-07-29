@@ -1,0 +1,35 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login </title>
+    <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
+    <link rel="stylesheet" href="/static/css/signupstyle.css">
+    <link href='https://fonts.googleapis.com/css?family=Leckerli One' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+<body class = "lightdark1" id = "bodyid">
+    <div id = "nav_login_back" class = "lightdarknav1">
+        <a href = "/">&laquo; Back</a>        
+    </div>
+    <div class="container">
+        <div class="form-container" id="signup-form" style="display: block;">
+          <h1>Sign Up</h1>
+          {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+            
+          </div>
+      </div>
+    <div class="theme-container shadow-dark">
+        <img id="theme-icon"    src="https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg" alt="ERR">
+    </div>
+    <script src="/static/js/signup.js"></script>
+</body>
+</html>
